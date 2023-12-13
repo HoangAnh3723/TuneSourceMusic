@@ -88,29 +88,7 @@
 <body style="user-select: none;">
 
 
-   <!-- form Edit -->
-
-
-   <div class="app_edit" style="display: none;">
-      <div class="edit-container">
-            <div class="mb-3">
-               <label for="">Title</label>
-               <input type="text" class="form-control chart__text-title" name="name" placeholder="name" value="">
-            </div>
-            <div class="mb-3">
-               <label for="">Singer</label>
-               <input type="text" class="form-control chart__text-singer" name="singer" placeholder="singer" value="">
-            </div>
-            <div class="mb-3">
-               <label for="">Image</label>
-               <input type="file" class="form-control chart__file-image">
-            </div>
-            <button type="submit" class="btn btn-primary btn-close-update">Update</button>
-            <a class="btn btn-primary btn-close-edit">Close</a>
-      </div>
-
-   </div>
-
+    
 
 
    <!-- Begin: Open login form -->
@@ -678,1633 +656,1223 @@
                   <div class=" col l-12 m-12 c-12">
                      <div class="container__playlist">
                         <div class="playlist__list-charts overflow-visible">
+                           
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          is-outline--blue
-                                                                          
-                                                                          
-                                                                          
-                                                                      ">
-                                       1
-                                    </div>
+                                    <div class="playlist__rank-number is-outline--blue">
+                                       1</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
                                  <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/thaylong.jpg') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/thaylong.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/thaylong.jpg') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/ChuaBaoGioEmQuen-HuongLy.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Chưa Bao Giờ Em
-                                       Quên</span>
-                                    <p class="playlist__song-author info__author">
-
+                                    <span class="playlist__song-title info__title">Chưa Bao Giờ Em Quên</span>
+                                    <p class="playlist__song-author ... ... info__author">
                                        <a href="#" class="is-ghost">Hương Ly</a>
-
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/ChuaBaoGioEmQuen-HuongLy.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">05:11</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
                                  <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/ChuaBaoGioEmQuen-HuongLy.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          is-outline--green
-                                                                          
-                                                                          
-                                                                      ">
-                                       2
-                                    </div>
+                                    <div class="playlist__rank-number is-outline--red">
+                                       2</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/yeulacuoi.jpg') no-repeat center center / cover">
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/BanhMiKhong.jfif') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/yeulacuoi.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/BanhMiKhong.jfif') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/BanhMiKhong-DatGDuUyen-6175988.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Yêu Là Cưới</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Phát Hồ</a>,
-
-                                       <a href="#" class="is-ghost">X2X</a>,
-
-                                       <a href="#" class="is-ghost"></a>
-
+                                    <span class="playlist__song-title info__title">Bánh Mì Không</span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Đạt G, Du Uyên</a>
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/BanhMiKhong-DatGDuUyen-6175988.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">02:59</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="2">
+                                 <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/BanhMiKhong-DatGDuUyen-6175988.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          is-outline--red
-                                                                          
-                                                                          
-                                                                      ">
-                                       3
-                                    </div>
+                                    <div class="playlist__rank-number is-outline--green">
+                                       3</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/emlaconthuyen.jpg') no-repeat center center / cover">
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/NauChoEm.jfif') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/yeulacuoi.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/NauChoEm.jfif') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/NauAnChoEm-Den-9466587.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Em là con thuyền cô đơn</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Tery Trần</a>,
-
-                                       <a href="#" class="is-ghost">X2X</a>,
-
-                                       <a href="#" class="is-ghost"></a>
-
+                                    <span class="playlist__song-title info__title">Nấu Ăn Cho Em</span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Đen</a>
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/NauAnChoEm-Den-9466587.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">04:59</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="3">
+                                 <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/NauAnChoEm-Den-9466587.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       4
+                                    <div class="playlist__rank-number is-outline--text">
+                                       4</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
                                     </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/BaoLauTaLaiYeuMotNguoi.jfif') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/BaoLauTaLaiYeuMotNguoi.jfif') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/BaoLauTaLaiYeuMotNguoi-DoanHieuB-7100141.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Bao Lâu Ta Lại Yêu Một Người</span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Đen</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/BaoLauTaLaiYeuMotNguoi-DoanHieuB-7100141.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/BaoLauTaLaiYeuMotNguoi-DoanHieuB-7100141.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       5</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/BaoLauTaLaiYeuMotNguoi.jfif') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/BaoLauTaLaiYeuMotNguoi.jfif') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/BaoLauTaLaiYeuMotNguoi-DoanHieuB-7100141.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Bao Lâu Ta Lại Yêu Một Người</span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Doãn Hiếu, B</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/BaoLauTaLaiYeuMotNguoi-DoanHieuB-7100141.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/BaoLauTaLaiYeuMotNguoi-DoanHieuB-7100141.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       6</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/OIP.jfif') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/OIP.jfif') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/CoMotTinhYeuGoiLaChiaTay-TangPhucTruongThaoNhi-7104966.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Có Một Tình Yêu Gọi Là Chia Tay</span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Tăng Phúc, Trương Thảo Nhi</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/CoMotTinhYeuGoiLaChiaTay-TangPhucTruongThaoNhi-7104966.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/CoMotTinhYeuGoiLaChiaTay-TangPhucTruongThaoNhi-7104966.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       7</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/OIP.jfif') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/OIP.jfif') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/CoMotTinhYeuGoiLaChiaTay-TangPhucTruongThaoNhi-7104966.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Có Một Tình Yêu Gọi Là Chia Tay</span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Tăng Phúc, Trương Thảo Nhi</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/CoMotTinhYeuGoiLaChiaTay-TangPhucTruongThaoNhi-7104966.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/CoMotTinhYeuGoiLaChiaTay-TangPhucTruongThaoNhi-7104966.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       8</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/yuniboo.jpg') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/yuniboo.jpg') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/CuoiLuonDuocKhong-YuniBooGoctoiMixer-7198004.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Cưới Luôn Được Không </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">YuniBoo, GoctoiMixer</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/CuoiLuonDuocKhong-YuniBooGoctoiMixer-7198004.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/CuoiLuonDuocKhong-YuniBooGoctoiMixer-7198004.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       8</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/yuniboo.jpg') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/yuniboo.jpg') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/CuoiLuonDuocKhong-YuniBooGoctoiMixer-7198004.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Cưới Luôn Được Không </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">YuniBoo, GoctoiMixer</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/CuoiLuonDuocKhong-YuniBooGoctoiMixer-7198004.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/CuoiLuonDuocKhong-YuniBooGoctoiMixer-7198004.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       9</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/diudang.jpg') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/diudang.jpg') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/DiuDangEmDen-ERIKNinjaZ-7078877.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Dịu Dàng Em Đến </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Eriz, Ninja Z</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/DiuDangEmDen-ERIKNinjaZ-7078877.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/DiuDangEmDen-ERIKNinjaZ-7078877.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       10</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/EmLaConThuyenCoDon.jfif') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/EmLaConThuyenCoDon.jfif') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/EmLaConThuyenCoDon-ThaiHoc-7099598.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Em Là Con Thuyền Cô Đơn </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Thái Học</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/EmLaConThuyenCoDon-ThaiHoc-7099598.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/EmLaConThuyenCoDon-ThaiHoc-7099598.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       10</div>
+                                    <div class="playlist__rank-icon">
+                                       <i class="fa-solid fa-minus"></i>
+                                    </div>
+                                 </div>
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/HayTraoChoAnh.jfif') no-repeat center center / cover">
+                                    <div class="thumb--animate">
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/HayTraoChoAnh.jfif') no-repeat 50% / contain"></div>
+                                    </div>
+                                    <div class="play-song--actions">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3">
+                                          <i class="fa-solid fa-play"></i>
+                                      </div>
+                                      
+                                    </div>
+                                 </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
+                                 <div class="playlist__song-body media__info">
+                                    <span class="playlist__song-title info__title">Hãy Trao Cho Anh </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Sơn Tùng, Snoog Dog</a>
+                                    </p>
+                                 </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
+                              </div>
+                              
+                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
+                                 <div class="playlist__song-btn" value="31">
+                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
+                                 </div>
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
+                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
+                                </div>
+                                 <div class="playlist__song-btn btn--heart option-btn">
+                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
+                                 </div>
+                                 <div class="playlist__song-btn option-btn">
+                                    <a href="./assets/musics/zingchart/HayTraoChoAnh-SonTungMTPSnoopDogg-6010660.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
+                                 </div>
+
+                              </div>
+                           </div>
+
+                           <div class="playlist__list-song media ">
+                              <div class="playlist__song-info media__left">
+                                 <div class="playlist__song-rank">
+                                    <div class="playlist__rank-number is-outline--text">
+                                       11</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
                                  <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/khuemoclong.jpg') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/khuemoclong.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/khuemoclong.jpg') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/KhueMocLan-HuongLyJombie-7080358.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Khuê Mộc Lang</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Hương Ly</a>,
-
-                                       <a href="#" class="is-ghost">Jombie</a>
-
+                                    <span class="playlist__song-title info__title">Khuê Mộc Lang </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Hương Ly, Jombie</a>
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/KhueMocLan-HuongLyJombie-7080358.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">03:26</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="4">
+                                 <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/KhueMocLan-HuongLyJombie-7080358.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       5
-                                    </div>
+                                    <div class="playlist__rank-number is-outline--text">
+                                       12</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/yeulacuoiremix.jpg') no-repeat center center / cover">
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/Money).jfif') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/yeulacuoiremix.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/Money).jfif') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/Money-LISA-7086698.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Yêu Là Cưới
-                                       (Remix)</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Phát Hồ</a>,
-
-                                       <a href="#" class="is-ghost">DinhLong</a>,
-
-                                       <a href="#" class="is-ghost">X2X</a>
-
+                                    <span class="playlist__song-title info__title">Money </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Lisa (BlackPink)</a>
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/Money-LISA-7086698.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">03:50</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="5">
+                                 <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/Money-LISA-7086698.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       6
-                                    </div>
+                                    <div class="playlist__rank-number is-outline--text">
+                                       13</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/thaylong.jpg') no-repeat center center / cover">
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/RoiToiLuon.jfif') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/thaylong.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/RoiToiLuon.jfif') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/RoiToiLuon-Nal-7064237.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Thay Lòng</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">DIMZ</a>,
-
-                                       <a href="#" class="is-ghost">TVk</a>,
-
-                                       <a href="#" class="is-ghost">NH4T</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:36</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="6">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media ">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       7
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/roitoiluon.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/roitoiluon.jpg') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Rồi Tới Luôn</span>
-                                    <p class="playlist__song-author info__author">
-
+                                    <span class="playlist__song-title info__title">Rồi Tới Luôn </span>
+                                    <p class="playlist__song-author ... ... info__author">
                                        <a href="#" class="is-ghost">Nal</a>
-
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/RoiToiLuon-Nal-7064237.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">04:07</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="7">
+                                 <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/RoiToiLuon-Nal-7064237.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       8
-                                    </div>
+                                    <div class="playlist__rank-number is-outline--text">
+                                       14</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/tinhyeugoilachiatay.jpg') no-repeat center center / cover">
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/WaitingForYou.jfif') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/tinhyeugoilachiatay.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/WaitingForYou.jfif') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/WaitingForYou-MONOOnionn-7733882.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Có Một Tình Yêu Gọi Là
-                                       Chia
-                                       Tay</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Tăng Phúc</a>,
-
-                                       <a href="#" class="is-ghost">Trương Thảo Nhi</a>
-
+                                    <span class="playlist__song-title info__title">Waiting For You </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Mono, Onion</a>
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/WaitingForYou-MONOOnionn-7733882.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">04:18</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="8">
+                                 <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/WaitingForYou-MONOOnionn-7733882.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
                            <div class="playlist__list-song media ">
                               <div class="playlist__song-info media__left">
                                  <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       9
-                                    </div>
+                                    <div class="playlist__rank-number is-outline--text">
+                                       15</div>
                                     <div class="playlist__rank-icon">
                                        <i class="fa-solid fa-minus"></i>
                                     </div>
                                  </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/phuongly.jpg') no-repeat center center / cover">
+                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/YeuLaCuoi.jfif') no-repeat center center / cover">
                                     <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/phuongly.jpg') no-repeat 50% / contain">
-                                       </div>
+                                       <div class="thumb--animate-img" style="background: url('./assets/img/YeuLaCuoi.jfif') no-repeat 50% / contain"></div>
                                     </div>
                                     <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
+                                       <div class="control-btn btn-toggle-play1" data-audio="./assets/musics/zingchart/YeuLaCuoi-PhatHoX2X.mp3">
                                           <i class="fa-solid fa-play"></i>
-                                       </div>
+                                      </div>
+                                      
                                     </div>
                                  </div>
+                                 
+                                 {{-- <script>
+                                  const playButton = document.querySelector('.btn-toggle-play1');
+                                    const audio = new Audio('./assets/musics/ChuaBaoGioEmQuen-HuongLy.mp3');
+                                 
+                                    playButton.addEventListener('click', () => {
+                                       if (audio.paused) {
+                                          audio.play();
+                                          playButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                                       } else {
+                                          audio.pause();
+                                          playButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                                       }
+                                    });
+                                 </script> --}}
+                                 
+
                                  <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Cưới Luôn Được
-                                       Không?</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">YuniBoo</a>,
-
-                                       <a href="#" class="is-ghost">Goctoi Mixer</a>
-
+                                    <span class="playlist__song-title info__title">Yêu Là Cưới </span>
+                                    <p class="playlist__song-author ... ... info__author">
+                                       <a href="#" class="is-ghost">Phat Hồ, X2X</a>
                                     </p>
                                  </div>
+                                 <div>
+                                 <audio id="audio"  controls>
+                                    <source src="{{ asset('assets/musics/zingchart/YeuLaCuoi-PhatHoX2X.mp3') }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                
+                                 </div>
                               </div>
-                              <span class="playlist__song-time media__content">04:02</span>
+                              
                               <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="9">
+                                 <div class="playlist__song-btn" value="31">
                                     <button class="btn btn-warning chart__btn-edit">Edit</button>
                                  </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
+                                 <div class="playlist__song-btn btn--mic option-btn" id="lyricsButton">
                                     <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
+                                </div>
                                  <div class="playlist__song-btn btn--heart option-btn">
                                     <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
                                  </div>
                                  <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
+                                    <a href="./assets/musics/zingchart/YeuLaCuoi-PhatHoX2X.mp3" download> 
+                                        <i class="btn--icon fa-solid fa-arrow-alt-circle-down"></i>
+                                    </a>
                                  </div>
+
                               </div>
                            </div>
 
-                           <div class="playlist__list-song media ">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       10
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song10.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Bao Lâu Ta Lại Yêu Một
-                                       Người</span>
-                                    <p class="playlist__song-author info__author">
+                           
 
-                                       <a href="#" class="is-ghost">Doãn Hiếu</a>,
-
-                                       <a href="#" class="is-ghost">B.</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:51</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="10">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       11
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/tinhyeugoilachiatay.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/tinhyeugoilachiatay.jpg') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Thương Nhau Tới
-                                       Bến</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Nal</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:55</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="11">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       12
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/Zingchart/tinhyeugoilachiatay.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/Zingchart/tinhyeugoilachiatay.jpg') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Đông Phai Mờ Dáng
-                                       Ai</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">DatKaa</a>,
-
-                                       <a href="#" class="is-ghost">QT Beatz</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:40</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="12">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       13
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song13.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Nhắn Rằng Anh Nhớ
-                                       Em</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Đình Dũng</a>,
-
-                                       <a href="#" class="is-ghost">ACV</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">05:12</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="13">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       14
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song14.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Dịu Dàng Em Đến</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">ERIK</a>,
-
-                                       <a href="#" class="is-ghost">NinjaZ</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:05</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="14">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       15
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song15.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Em Hát Ai Nghe</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Orange</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:39</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="15">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       16
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song16.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Vậy Là Ta Mất Nhau</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Khải Đăng</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:15</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="16">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       17
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song17.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">vâng anh đi đi (liu riu
-                                       version)</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Bích Phương</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:39</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="17">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       18
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song18.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Nếu Lúc Trước Em Đừng
-                                       Tới</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Phạm Đình Thái Ngân</a>,
-
-                                       <a href="#" class="is-ghost">Hino</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:35</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="18">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       19
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song19.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Cô Đơn Dành Cho Ai</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Lee Ken</a>,
-
-                                       <a href="#" class="is-ghost">Nal</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:51</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="19">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       20
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song20.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">MONEY</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">LISA</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">02:48</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="20">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       21
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song21.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Yêu Mà Chưa Dám
-                                       Nói</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Thanh Hưng</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:25</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="21">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       22
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song22.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Độ Tộc 2</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Độ Mixi</a>,
-
-                                       <a href="#" class="is-ghost">Pháo</a>,
-
-                                       <a href="#" class="is-ghost">Phúc Du</a>,
-
-                                       <a href="#" class="is-ghost">Masew</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:21</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="22">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       23
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song23.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Chiều Đồng Quê</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">H2K</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:20</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="23">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       24
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song24.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Túp Lều Vàng</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Nguyễn Đình Vũ</a>,
-
-                                       <a href="#" class="is-ghost">ACV</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:31</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="24">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       25
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song25.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">LALISA</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">LISA</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:21</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="25">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       26
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song26.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Sai Cách Yêu</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Lê Bảo Bình</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">05:42</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="26">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       27
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song27.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">có hẹn với thanh
-                                       xuân</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">MONSTAR</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:38</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="27">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       28
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song28.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Em Nào Có Tội</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Thương Võ</a>,
-
-                                       <a href="#" class="is-ghost">ACV</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:51</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="28">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       29
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song29.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Nhắn Tới Khoảng Trời
-                                       Em</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Quân A.P</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">03:55</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="29">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <div class="playlist__list-song media song--not-expand">
-                              <div class="playlist__song-info media__left">
-                                 <div class="playlist__song-rank">
-                                    <div class="playlist__rank-number 
-                                                                          
-                                                                          
-                                                                          
-                                                                          is-outline--text
-                                                                      ">
-                                       30
-                                    </div>
-                                    <div class="playlist__rank-icon">
-                                       <i class="fa-solid fa-minus"></i>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-thumb media__thumb mr-10" style="background: url('./assets/img/tabCharts/chartSongRanks/song30.jpg') no-repeat center center / cover">
-                                    <div class="thumb--animate">
-                                       <div class="thumb--animate-img" style="background: url('./assets/img/SongActiveAnimation/icon-playing.gif') no-repeat 50% / contain">
-                                       </div>
-                                    </div>
-                                    <div class="play-song--actions">
-                                       <div class="control-btn btn-toggle-play1">
-                                          <i class="fa-solid fa-play"></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="playlist__song-body media__info">
-                                    <span class="playlist__song-title info__title">Em Hứa Thế Nào</span>
-                                    <p class="playlist__song-author info__author">
-
-                                       <a href="#" class="is-ghost">Như Việt</a>,
-
-                                       <a href="#" class="is-ghost">ACV</a>
-
-                                    </p>
-                                 </div>
-                              </div>
-                              <span class="playlist__song-time media__content">04:25</span>
-                              <div class="playlist__song-option song--tab media__right hide-on-mobile">
-                                 <div class="playlist__song-btn" value="30">
-                                    <button class="btn btn-warning chart__btn-edit">Edit</button>
-                                 </div>
-                                 <div class="playlist__song-btn btn--mic option-btn">
-                                    <i class="btn--icon song__icon icon__mic--edit fa-solid fa-microphone"></i>
-                                 </div>
-                                 <div class="playlist__song-btn btn--heart option-btn">
-                                    <i class="btn--icon song__icon icon--heart fa-solid fa-heart"></i>
-                                 </div>
-                                 <div class="playlist__song-btn option-btn">
-                                    <i class="btn--icon fa-solid fa-ellipsis"></i>
-                                 </div>
-                              </div>
-                           </div>
+                           
 
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="charts__expand">
-                  <button class="button charts__expand-btn">Xem top 100</button>
-               </div>
+               
             </div>
          </div>
       </div>
@@ -3978,6 +3546,32 @@
    </div>
    <!-- End grid 2: -->
 
+<!-- form Edit -->
+
+
+<div class="app_edit" style="display: none;">
+   <div class="edit-container">
+         <div class="mb-3">
+            <label for="">Title</label>
+            <input type="text" class="form-control chart__text-title" name="name" placeholder="name" value="">
+         </div>
+         <div class="mb-3">
+            <label for="">Singer</label>
+            <input type="text" class="form-control chart__text-singer" name="singer" placeholder="singer" value="">
+         </div>
+         <div class="mb-3">
+            <label for="">Path</label>
+            <input type="file" class="form-control" name="path" placeholder="name">
+         </div>
+         <div class="mb-3">
+            <label for="">Image</label>
+            <input type="file" class="form-control chart__file-image">
+         </div>
+         <button type="submit" class="btn btn-primary btn-close-update">Update</button>
+         <a class="btn btn-primary btn-close-edit">Close</a>
+   </div>
+
+</div>
 
 
 
