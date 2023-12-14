@@ -1650,7 +1650,6 @@
                                  <div>
                                  <audio id="audio"  controls>
                                     <source src="{{ asset('assets/musics/zingchart/WaitingForYou-MONOOnionn-7733882.mp3') }}" type="audio/mpeg">
-                                    Your browser does not support the audio element.
                                 </audio>
                                 
                                  </div>
